@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Controle de Combustível"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data (ex: 27/10/2026)"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/etHodometro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hodômetro Atual (km)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etLitros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Litros Abastecidos"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etValorLitro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor por Litro (R$)"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Combustível:"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgCombustivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbGasolina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gasolina"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbEtanol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Etanol" />
+
+            <RadioButton
+                android:id="@+id/rbDiesel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diesel" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar Abastecimento"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnVerHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consultar Histórico"
+            android:layout_marginTop="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comparar Etanol e Gasolina"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etPrecoEtanol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preço Etanol (R$)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etPrecoGasolina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preço Gasolina (R$)"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/btnCalcularFlex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Qual Combustível Compensa?"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvResultadoFlex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O resultado aparecerá aqui."
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>
